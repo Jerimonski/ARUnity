@@ -1,6 +1,9 @@
 import dotenv from "dotenv"
 import express from "express"
 import cors from "cors"
+import FormulariosRoutes from "./routes/FormulariosRoutes.js"
+
+dotenv.config()
 
 const app = express()
 
@@ -21,7 +24,7 @@ app.use(
 añade un prefijo a la ruta
  */
 
-app.use("/formularios", formularioRoutes)
+app.use("/formularios", FormulariosRoutes)
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
